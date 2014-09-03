@@ -1,5 +1,8 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
+  before_action :convert_format, only: [ :create, :update ]
+
+  skip_before_filter :verify_authenticity_token
 
   # GET /photos
   # GET /photos.json
@@ -69,6 +72,15 @@ class PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:title)
+      params.require(:photo).permit(:title, :image)
+    end
+
+    def convert_format
+      file = params[:photo][:image]
+      if !file.blank? && file.present? && file.content_type == 'application/octet-stream'
+        mime_type = MIME::Types.type_for(file.original_filename)    
+        file.content_type = mime_type.first.content_type if mime_type.first
+      end
+      params[:photo][:image] = file
     end
 end
