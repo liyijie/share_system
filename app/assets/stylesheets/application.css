@@ -13,3 +13,161 @@
  *= require_tree .
  *= require_self
  */
+html,body,h1,h2,h3,h4,h5,h6,hr,p,ul,ol,li,pre,form,fieldset,button,input,textarea,th,td
+  {
+  margin: 0;
+  padding: 0;
+}
+
+dl,dt,dd {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  zoom: 1;
+}
+
+body,button,div,input,select,textarea {
+  font: 13px/1.5 tahoma, arial, simsun, sans-serif;
+  font-family: Arial, \5FAE\8F6F\96C5\9ED1, Helvetica, sans-serif;
+  _font: 12px/1.5 tahoma, arial, simsun, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,button,input,select,textarea {
+  font-size: 100%;
+}
+
+ul,ol,li {
+  list-style: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+a {
+  color:#000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:focus {
+  color:#000000;
+  background: transparent;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color:#000000;
+  background: transparent;
+  text-decoration: underline;
+  outline: none;
+  cursor: pointer;
+}
+
+.na:hover {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+textarea {
+  resize: none;
+  outline: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+.hand {
+  cursor: pointer;
+}
+
+.bg_1 {
+  background: #ececea;
+}
+.color_w {
+  color:#ffffff;
+}
+
+.float_left {
+  float:left;
+}
+.clear_both {
+  clear:both;
+}
+.float_right {
+  float:right;
+}
+
+.clear100 {
+  clear:both;
+  width: 100%;
+}
+
+.overflow_h {
+  overflow: hidden;
+}
+
+.text_align_c {
+  text-align: center;
+}
+.text_align_l {
+  text-align: left;
+}
+
+.space {
+  clear:both; 
+  width:100%; 
+  overflow: hidden; 
+  margin-top:10px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.margintop10 {
+  margin-top: 10px;
+}
+.marginleft10 {
+  margin-left: 10px;
+}
+
+.root1440 .window {
+  position: relative;
+  clear: both;
+  width: 1200px;
+  min-width: 1200px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.window {
+  position: relative;
+  clear: both;
+  width: 960px;
+  min-width: 960px;
+  margin: 0 auto;
+  padding: 0px;
+}
