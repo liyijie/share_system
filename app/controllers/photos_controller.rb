@@ -24,6 +24,21 @@ class PhotosController < ApplicationController
   def edit
   end
 
+  # GET /photos/manage
+  def manage
+    @photos = Photo.all
+  end
+
+  # DELETE /photos/destroy_multiple
+  # DELETE /photos/destroy_multiple.json
+  def destroy_multiple
+    Photo.destroy(params[:photo_ids]) unless params[:photo_ids].blank?
+    respond_to do |format|
+      format.html { redirect_to photos_url, notice: "已删除." }
+      format.json { head :no_content }
+    end
+  end
+
   # POST /photos
   # POST /photos.json
   def create
