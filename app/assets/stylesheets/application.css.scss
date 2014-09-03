@@ -171,3 +171,11 @@ img {
   margin: 0 auto;
   padding: 0px;
 }
+
+.main {
+  background: url("background.png") no-repeat;
+  height: 640px;
+  .content {
+    height: 560px;
+  }
+}
