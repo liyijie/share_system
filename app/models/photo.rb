@@ -10,7 +10,7 @@
 
 class Photo < ActiveRecord::Base
   
-  has_attached_file :image, :styles => { :product => '320x320>'}
+  has_attached_file :image, :styles => { :thumb => '160x160>', :product => '320x320>'}
   
   validates_attachment_presence :image
   validates_attachment_size     :image, :less_than => 5.megabytes

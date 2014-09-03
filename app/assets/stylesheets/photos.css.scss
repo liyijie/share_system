@@ -1,3 +1,64 @@
 // Place all the styles related to the photos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.photo_action {
+
+  width: 650px;
+  margin: 0 auto;
+  padding: 10px 10px;
+  clear: both;
+
+  a, a:focus, a:hover, a:visited {
+    padding: 10px 50px;
+    margin-left: 20px;
+    background: #f28505;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .photo_delete {
+    margin-left: 40px;
+    padding: 5px 100px;
+    background: #f25e05;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+}
+
+.photo_contents {
+  margin: 0px 40px;
+  padding: 10px;
+  background: rgba(198,198,198,0.6);
+  background: transparent\9;
+  zoom:1\8; /* required for the filters */
+  -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"; /* IE8 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000); /* IE5.5-7 */
+}
+
+.photo_display {
+  height: 500px;
+  overflow: auto;
+}
+
+.photo {
+  float: left;
+  padding: 15px 3px;
+  position:relative
+}
+
+.photo_image {
+  // background: white;
+  text-align: center;
+  line-height: 160px;
+  border: 2px solid white;
+  width: 160px;
+  height: 160px;
+  padding: 2px;
+}
+
+.photo_checkbox {
+  position:absolute; left:5px; top:13px;
+}
