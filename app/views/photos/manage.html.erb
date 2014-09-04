@@ -19,6 +19,7 @@
       <%= link_to "全 选", 'javascript: void(0)', class: "photo_select", id: "select" %>
       <%= link_to "全不选", 'javascript: void(0)', class: "photo_select", id: "unselect" %>
       <%= submit_tag "删 除", class: "photo_delete", data: {confirm: '是否确认删除?'}  %>
+      <%= link_to("返 回", photos_path, class: "photo_select") %>
     </div>
   </div>
 
