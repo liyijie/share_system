@@ -7,7 +7,10 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.json
   def index
-    @photos = Photo.all
+    @photos = Photo.order('id DESC')
+    @count = Photo.count
+    last_photo = Photo.last
+    @last_id = last_photo.blank? ? 0 : last_photo.id
   end
 
   # GET /photos/1
@@ -26,7 +29,7 @@ class PhotosController < ApplicationController
 
   # GET /photos/manage
   def manage
-    @photos = Photo.all
+    @photos = Photo.order('id DESC')
   end
 
   # GET /photos/update

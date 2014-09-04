@@ -1,7 +1,7 @@
 <title>图片管理</title>
 
 <%= form_tag destroy_multiple_photos_path, method: :delete do |f| %>
-  <div class="photo_contents">
+  <div class="photo_contents" id="photos_manage" >
     <div class="photo_display">
       <% @photos.each do |photo| %>
         <div class="photo">
@@ -16,8 +16,8 @@
     </div>
 
     <div class="photo_action">
-      <%= link_to "全 选", '#', class: "photo_select" %>
-      <%= link_to "全不选", '#', class: "photo_select" %>
+      <%= link_to "全 选", 'javascript: void(0)', class: "photo_select", id: "select" %>
+      <%= link_to "全不选", 'javascript: void(0)', class: "photo_select", id: "unselect" %>
       <%= submit_tag "删 除", class: "photo_delete", data: {confirm: '是否确认删除?'}  %>
     </div>
   </div>
