@@ -29,6 +29,13 @@ class PhotosController < ApplicationController
     @photos = Photo.all
   end
 
+  # GET /photos/update
+  def check
+    @count = Photo.count
+    last_photo = Photo.last
+    @last_id = last_photo.blank? ? 0 : last_photo.id
+  end
+
   # DELETE /photos/destroy_multiple
   # DELETE /photos/destroy_multiple.json
   def destroy_multiple
