@@ -4,7 +4,12 @@
 
 $ ->
   if $("#photos_index").length > 0
+    redirect = false
+    $("#main_manage_link").click ->
+      redirect = true
     refresh_image = ->
+      if redirect
+        return
       $.ajax
         type: 'get'
         dataType: 'json'
