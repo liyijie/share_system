@@ -15,19 +15,20 @@
   <%= link_to "管理", manage_photos_path %>
 </div>
 
-<script >
+<script type="text/javascript">
     $(document).ready(function($) {
       var $images = $(".main_photo_list").children();
       if($images.length > 0) {
         $images.each(function(index, el) {
           $(el).click(function(event) {
+            $(".main_photo_list div").removeClass("selected");
+            $(el).addClass("selected");
             $("#photo_show").attr("src", $(this).children().eq(0).attr("product"));
           });
           if(index == 0) {
             $(el).click();
           }
-        });
-        
+        }); 
       }
     });
 </script>
