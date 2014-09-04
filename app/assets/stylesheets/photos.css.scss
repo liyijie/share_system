@@ -62,3 +62,87 @@
 .photo_checkbox {
   position:absolute; right:5px; bottom:15px;
 }
+
+.photo_main {
+	clear: both;
+	width: 320px;
+	height: 320px;
+	line-height: 320px;
+	margin: 0 auto;
+	text-align: center;
+	overflow: hidden;
+}
+
+
+
+.photo_list {
+	clear: both;
+	overflow: hidden;
+	width: 680px;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+.main_show_div {
+  clear: both;
+  overflow: hidden;
+  width: 950px;
+  height: 500px;
+  padding: 30px;
+  .main_photo_show {
+    float:left;
+    width: 730px;
+    height: 500px;
+    line-height: 500px;
+    text-align: center;
+    background: rgba(198,198,198,0.6);
+    -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"; /* IE8 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000); /* IE5.5-7 */
+    img {
+      clear: both;
+      max-width: 720px;
+      max-height: 490px;
+      margin: 5px;
+    }
+  }
+  .main_photo_list {
+    float:left;
+    width: 120px;
+    height: 490px;
+    overflow: auto;
+    margin-left: 20px;
+    background: rgba(198,198,198,0.6);
+    -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"; /* IE8 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000); /* IE5.5-7 */
+    padding: 5px 10px;
+    div {
+      clear: both;
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      text-align: center;
+      line-height: 100px;
+      margin-top: 15px;
+      border: 2px solid #fff;
+      img {
+        clear: both;
+      }
+    }
+  }
+}
+
+.main_photo_button {
+  clear: both;
+  overflow: hidden;
+  width: 880px;
+  margin: 0 auto;
+  text-align: right;
+  a, a:focus, a:hover, a:visited {
+    padding: 10px 50px;
+    margin-left: 20px;
+    background: #f28505;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+}
