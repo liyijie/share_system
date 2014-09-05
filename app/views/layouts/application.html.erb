@@ -7,7 +7,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body data-controller="<%= "#{params[:controller]}" %>"  data-action="<%= "#{params[:action]}" %>">
 <div class="window">
   <%= render "layouts/head" %>
   <div class="main">
@@ -19,4 +19,12 @@
 </div>
 
 </body>
+  <script type="text/javascript">
+    var $body = $("body");
+    var controller = $body.attr("data-controller");
+    var action = $body.attr("data-action");
+    if( Window.ScriptRun && Window.ScriptRun[controller] && Window.ScriptRun[controller][action]) {
+      Window.ScriptRun[controller][action].init();
+    }
+  </script>
 </html>
