@@ -6,6 +6,10 @@ Window.ScriptRun =
   photos:
     index:
       init: ->
+        redirect = false
+        $("#main_manage_link").click ->
+          redirect = true
+
         refresh_image = ->
           if redirect
             return
@@ -15,16 +19,13 @@ Window.ScriptRun =
             url: '/photos/check.json'
 
             success: (result)->
-              count = parseInt $("#photos_index").attr("count")
-              last_id = parseInt $("#photos_index").attr("last_id")
+              count = parseInt $(".main_show_div").attr("count")
+              last_id = parseInt $(".main_show_div").attr("last_id")
 
               if count == result["count"] && last_id == result["last_id"]
                 return
               window.location.href = "/photos"
 
-        redirect = false
-        $("#main_manage_link").click ->
-          redirect = true
         refresh_image()
         setInterval(refresh_image, 500)
     manage:
